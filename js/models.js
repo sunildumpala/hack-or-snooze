@@ -54,6 +54,7 @@ class StoryList {
     //  instance method?
 
     // query the /stories endpoint (no auth required)
+    console.debug("Entered getStories");
     const response = await axios({
       url: `${BASE_URL}/stories`,
       method: "GET",
@@ -73,8 +74,21 @@ class StoryList {
    * Returns the new Story instance
    */
 
-  async addStory( /* user, newStory */) {
+  async addStory( user, newStory ) {
     // UNIMPLEMENTED: complete this function!
+    
+    // POST to the /stories endpoint (auth required)
+    console.log("Entered addStory method updated 4");
+    let token = user.loginToken;
+    /*
+    const response = await axios({
+      url: `${BASE_URL}/stories`,
+      method: "POST",
+      params: {"token": user.loginToken, "story": newStory},
+    }); */
+    const response = await axios.post(`${BASE_URL}/stories`, {token, story: newStory});
+    console.log("Response is :", response.data); 
+    return new Story(response.data.story);
   }
 }
 
