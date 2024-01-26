@@ -37,7 +37,10 @@
   <div class="navbar-brand">
     <a class="nav-link" href="#" id="nav-all">Hack or Snooze</a>
   </div>
-  <div class="nav-right">
+  <div class="nav-center">
+    <a class="nav-link" href="#" id="nav-submit">submit</a>
+  </div>
+  <div class="nav-right">    
     <a class="nav-link" href="#" id="nav-login">login/signup</a>
     <a class="nav-link" href="#" id="nav-user-profile"></a>
     <a class="hidden" id="nav-logout" href="#"><small>(logout)</small></a>
@@ -74,6 +77,7 @@
   </form>
 
   <!-- Signup form -->
+  
   <form
       action="#"
       id="signup-form"
@@ -94,7 +98,54 @@
     </div>
     <button type="submit">create account</button>
   </form>
+
+  <form
+    action="#"
+    id="story-form"
+    class="story-form hidden"
+    method="post">
+    <h4>Create Story</h4>
+    <div class="story-input">
+      <label for="story-author">author</label>
+      <input id="story-author">
+    </div>
+    <div class="story-input">
+      <label for="story-title">title</label>
+      <input id="story-title">
+    </div>
+    <div class="story-input">
+      <label for="story-url">url</label>
+      <input id="story-url" >
+    </div>
+    <button type="submit">add story</button>
+  </form>
+
 </section>
+
+ <!-- Story form -
+ <section class="story-form-container container">
+  <form
+    action="#"
+    id="story-form"
+    class="story-form hidden"
+    method="post">
+    <h4>Create Story</h4>
+    <div class="story-input">
+      <label for="story-author">author</label>
+      <input id="story-author">
+    </div>
+    <div class="story-input">
+      <label for="story-title">title</label>
+      <input id="story-title">
+    </div>
+    <div class="story-input">
+      <label for="story-url">url</label>
+      <input id="story-url" >
+    </div>
+    <button type="submit">add story</button>
+  </form>
+</section>
+-->
 
 <!-- Library JS & our JS -->
 <script src="https://unpkg.com/jquery"></script>

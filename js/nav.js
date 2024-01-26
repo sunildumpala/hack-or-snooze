@@ -33,4 +33,20 @@ function updateNavOnLogin() {
   $navLogin.hide();
   $navLogOut.show();
   $navUserProfile.text(`${currentUser.username}`).show();
+  $navSubmit.show();
 }
+
+/** When a user clicks on submit */
+
+function navOnSubmit(evt){
+  console.debug("navOnSubmit");
+ // $(".main-nav-links").show();
+ // $navLogin.hide();
+ // $navLogOut.show();
+  hidePageComponents();
+  $navSubmit.show();
+ // $navUserProfile.text(`${currentUser.username}`).show();
+}
+
+console.debug("Trying to map event");
+$navSubmit.on("click", navOnSubmit );
