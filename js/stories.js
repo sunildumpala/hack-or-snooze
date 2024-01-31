@@ -50,3 +50,32 @@ function putStoriesOnPage() {
 
   $allStoriesList.show();
 }
+
+/***
+ * Put Story on the list
+ */
+
+async function putStoriesOnList(evt){
+  console.debug("putStoriesOnList: Function that I added");
+  console.debug("Target: ", evt);
+  
+  evt.preventDefault();
+
+  const author = $("#story-author").val();
+  const title = $("#story-title").val();
+  const url = $("#story-url").val();
+  console.debug(author, title, url);
+
+  let newStory = await storyList.addStory(currentUser,
+    {title, author, url});
+  console.debug(newStory);
+
+  $navStory.hide();
+
+
+
+
+  putStoriesOnPage();
+}
+
+$navStory.on("submit", putStoriesOnList);

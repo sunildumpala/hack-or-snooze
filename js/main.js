@@ -16,6 +16,7 @@ const $navLogOut = $("#nav-logout");
 console.debug("navLogout: ", $navLogOut);
 const $navSubmit = $("#nav-submit");
 console.debug("navSubmit: ", $navSubmit);
+const $navStory = $("#story-form");
 
 /** To make it easier for individual components to show just themselves, this
  * is a useful function that hides pretty much everything on the page. After

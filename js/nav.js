@@ -44,7 +44,7 @@ function navOnSubmit(evt){
  // $navLogin.hide();
  // $navLogOut.show();
   hidePageComponents();
-  $navSubmit.show();
+  $navStory.show();
  // $navUserProfile.text(`${currentUser.username}`).show();
 }
 

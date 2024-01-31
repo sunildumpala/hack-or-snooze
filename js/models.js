@@ -78,8 +78,10 @@ class StoryList {
     // UNIMPLEMENTED: complete this function!
     
     // POST to the /stories endpoint (auth required)
-    console.log("Entered addStory method updated 4");
+    console.debug("Entered addStory method updated 4");
     let token = user.loginToken;
+    console.debug(token,newStory);
+
     /*
     const response = await axios({
       url: `${BASE_URL}/stories`,
@@ -87,7 +89,7 @@ class StoryList {
       params: {"token": user.loginToken, "story": newStory},
     }); */
     const response = await axios.post(`${BASE_URL}/stories`, {token, story: newStory});
-    console.log("Response is :", response.data); 
+    console.debug("Response is :", response.data); 
     return new Story(response.data.story);
   }
 }
